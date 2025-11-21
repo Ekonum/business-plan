@@ -9,11 +9,16 @@ Application web pour construire un budget multi-années, suivre la trésorerie e
 
 ## Lancer localement
 ```bash
-# Backend
+# Backend (depuis la racine du dépôt)
 cd backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn backend.main:app --reload
+
+# Lancez Uvicorn depuis la racine (ou restez dans backend mais ciblez main:app)
+# Option 1
+uvicorn backend.main:app --reload  # exécuter depuis la racine du dépôt
+# Option 2
+# cd backend && uvicorn main:app --reload
 
 # Frontend
 cd ../frontend
